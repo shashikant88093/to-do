@@ -18,7 +18,7 @@ class App extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-
+if(this.state.item !==""){
     const newItem = {
       id: this.state.id,
       title: this.state.item
@@ -32,6 +32,8 @@ class App extends React.Component {
       id: uuid(),
       editItem: false
     });
+    // this.target.value="";
+  }
   };
   clearList = () => {
     this.setState({
@@ -85,4 +87,7 @@ class App extends React.Component {
     );
   }
 }
+
 export default App;
+
+
